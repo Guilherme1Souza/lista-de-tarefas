@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tarefas</title>
+
+    <link rel="stylesheet" href="global.css" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="p-10 max-w-7xl">
+    <header>
+      <div class="flex flex-col gap-1">
+        <span class="text-3xl font-bold select-none" id="saudacao"></span>
+        <span class="text-zinc-600 select-none" id="data"></span>
+      </div>
+
+      <div class="flex gap-2 mt-8">
+        <div
+          class="bg-gray-50 flex px-4 rounded-lg border-dashed border-2 border-gray-400"
+        >
+          <img src="../assets/search.svg" class="text-black" alt="" />
+          <input
+            type="text"
+            id="pesquisa"
+            class="h-[50px] p-2 bg-transparent focus:outline-none placeholder:text-black select-none"
+            placeholder="Pesquisar tarefa"
+          />
+        </div>
+
+        <div
+          class="bg-gray-50 flex w-full justify-between px-4 rounded-lg border-dashed border-2 border-gray-400"
+        >
+          
+            <form action="#" id="form-task" class="flex w-full justify-between">
+
+              <input
+                type="text"
+                name="task"
+                id="task"
+                class="h-[50px] py-4 bg-transparent focus:outline-none placeholder:text-black w-full"
+                placeholder="Nova tarefa"
+              />
+
+              <button onclick="mostrarResultado()">
+                <img src="../assets/add.svg" alt="Adicionar tarefa" class="select-none"/>
+              </button>
+            </form>
+         
+          
+          
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-8">
+      <ul id="resultado" class="space-y-4">
+        <h2 id="nenhumaTask" class="select-none">Nenhuma tarefa adicionada</h2>
+      </ul>
+    </main>
+
+    <script src="/src/script.js"></script>
+  </body>
+</html>
